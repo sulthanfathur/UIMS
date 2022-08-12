@@ -1,0 +1,161 @@
+.container {
+    max-width: 960px;
+}
+
+/*
+  * Custom translucent site header
+  */
+
+.site-header {
+  background-color: rgba(0, 0, 0, .85);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+.site-header a {
+  color: #999 ;
+  transition: ease-in-out color .15s;
+}
+.site-header a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.slogan {
+  color: #fff;
+}
+
+/*
+  * Extra utilities
+  */
+
+.flex-equal > * {
+  -ms-flex: 1;
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .flex-md-equal > * {
+    -ms-flex: 1;
+    flex: 1;
+  }
+}
+
+.overflow-hidden { overflow: hidden; }
+
+.navbar-logo img{
+  height : 30%;
+  width : 30%;
+  margin-top: 5px;
+}
+
+#bannerimage {
+  width: 100%;
+  background-image: url(https://res.cloudinary.com/dbev4mnac/image/upload/v1660310863/Rectangle_1_dx28nf.png);
+  height: 500px;
+  background-position: center;
+  margin-top: 0;
+}
+
+
+#about-us {
+  background-image: url(https://res.cloudinary.com/dbev4mnac/image/upload/v1660314087/Rectangle_14_xtn3hr.png);
+  width: 500px;
+  height: 500px;
+  background-position: center;
+}
+
+#visi-misi {
+  background-image: url(https://res.cloudinary.com/dbev4mnac/image/upload/v1660314079/Rectangle_13_ndo2e7.png);
+  width: 500px;
+  height: 500px;
+  background-position: center;
+}
+
+.headline {
+  width: 80%;
+  height: 300px;
+  border-radius: 21px 21px 0 0;
+}
+
+/*
+ * Footer
+ */
+ .blog-footer {
+  padding: 2.5rem 2.5rem;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: .05rem solid #e5e5e5;
+}
+.blog-footer p:last-child {
+  margin-bottom: 0;
+}
+
+/*
+    Auther: Abdelrhman Said
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:focus,
+*:active {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.wrapper{
+    background: #fff;
+    padding: 50px;
+    text-align: center;
+}
+
+.wrapper .icon{
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 50%;
+  margin: 20px;
+  width: 80px;
+  height: 80px;
+  line-height: 76px;
+  font-size: 50px;
+  display: inline-block;
+  align-items: center;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  color: #333;
+  text-decoration: none;
+}
+
+.wrapper .linkedin:hover,
+.wrapper .linkedin:hover .tooltip,
+.wrapper .linkedin:hover .tooltip::before {
+  background-color: #3b5999;
+  color: #ffffff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background-color: #e1306c;
+  color: #ffffff;
+}
+
+.wrapper .tiktok:hover,
+.wrapper .tiktok:hover .tooltip,
+.wrapper .tiktok:hover .tooltip::before {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+  background-color: #de463b;
+  color: #ffffff;
+}
