@@ -29,7 +29,7 @@ const NewsDetail = () => {
         <div className='container mt-3'>
             <h1 className='display-2'>{newsPost.title}</h1>
             <h4>{newsPost.month} {newsPost.day}</h4>
-            <div className='mt-5 mb-5' dangerouslySetInnerHTML={createNews()} />
+            <div className='mt-5 mb-5 content-light' dangerouslySetInnerHTML={createNews()}/>
             <hr />
             <p className='lead mb-5'><Link to='/news' className='font-weight-bold'>Back to News</Link></p>
         </div>

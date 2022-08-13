@@ -1,3 +1,13 @@
+#dark-mode {
+  background-color: #252525;
+  color: white;
+}
+
+.dark-mode {
+  background-color: #252525;
+  color: white;
+}
+
 .container {
     max-width: 960px;
 }
@@ -50,7 +60,7 @@
 #bannerimage {
   width: 100%;
   background-image: url(https://res.cloudinary.com/dbev4mnac/image/upload/v1660310863/Rectangle_1_dx28nf.png);
-  height: 500px;
+  height: 590px;
   background-position: center;
   margin-top: 0;
 }
@@ -59,7 +69,7 @@
 #about-us {
   background-image: url(https://res.cloudinary.com/dbev4mnac/image/upload/v1660314087/Rectangle_14_xtn3hr.png);
   width: 500px;
-  height: 500px;
+  height: 560px;
   background-position: center;
 }
 
