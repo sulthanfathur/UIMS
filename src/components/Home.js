@@ -34,7 +34,7 @@ const Home = () => (
                         automotive by creating groundbreaking innovation, by create an inclusive environment
                         and making positive impact in the world of motorsport.
                     </p>
-                    <Link className="btn btn-primary btn-lg" to="/about" role="button">Read More</Link>
+                    <a className="btn btn-primary btn-lg" href="/about#" onclick="return redirectMe(this);">Read More</a>
                 </div>
             </div>
             <div id="about-us" className="my-3 py-3 mr-md-3 pt-3 px-3 pt-md-5 px-md-5 overflow-hidden img-fluid mx-auto"></div>
