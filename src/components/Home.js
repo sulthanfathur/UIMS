@@ -2,17 +2,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Home = () => (
-    <div>
+    <div className="dark-text">
         <div id="bannerimage">
-            <div className="col-md-5 p-lg-5">
-                <h1 className="display-4 font-weight-normal slogan">Don't Hesitate, Just Start.</h1>
-                <p className="lead font-weight-normal slogan">Universitas Indonesia Motorsport</p>
+            <div className="col-md-5 p-lg-5 headline">
+                <h1 className="slogan">
+                    <h6>OUR MISSION:</h6>
+                    CREATE GROUNDBRAKING INNOVATION AND START INSPIRE PEOPLE.
+                </h1>
+                <p className="slogan">"DON'T HESITATE, JUST START."</p>
             </div>
         </div>
 
-        <div className="jumbotron mt-5 container text-center">
+        <div className="jumbotron bg-transparent mt-5 container text-center">
             <h1 className="display-4">Recent News</h1>
-            <p className="lead">All the latest news regarding our UKM.</p>
+            <p className="lead">All the latest news regarding UI Motorsport.</p>
             <hr className="my-4" />
             <Link className="btn btn-primary btn-lg" to="/news" role="button">Click Here!</Link>
         </div>
@@ -21,40 +24,20 @@ const Home = () => (
             <div className="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
                 <div className="my-2 py-3">
                     <h2 className="display-3">ABOUT US</h2>
-                    <p className="lead my-5">
-                        UI Motorsport is a Unit Kegiatan Mahasiswa (UKM) from
-                        University of Indonesia which have interests and talents on
-                        the automotive sector, especially motorsports.
+                    <p className="lead my-3">
+                        We are motorsport team that was founded by Universitas Indonesia students
+                        who are interest, talented, and innovative in automotive sector, especially in
+                        karts, electric motorcycle, and motorsports.
                     </p>
                     <p className="lead">
-                        UI Motorsport is also used as a catalyst for the team to
-                        develop their character and apply their knowledge and skills 
-                        in engineering to real life.
+                        Our mission is what drives us to inspire students who interest and have potential in
+                        automotive by creating groundbreaking innovation, by create an inclusive environment
+                        and making positive impact in the world of motorsport.
                     </p>
+                    <Link className="btn btn-primary btn-lg" to="/news" role="button">Read More</Link>
                 </div>
             </div>
             <div id="about-us" className="my-3 py-3 mr-md-3 pt-3 px-3 pt-md-5 px-md-5 overflow-hidden img-fluid mx-auto"></div>
-        </div>
-
-        <div className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-            <div id="visi-misi" className="my-3 py-3 mr-md-3 pt-3 px-3 pt-md-5 px-md-5 overflow-hidden img-fluid mx-auto"></div>
-            <div className="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-                <div>
-                    <h2 className="display-4">OUR VISION AND MISSION</h2>
-                    <h4>Visi</h4>
-                    <p className="lead">
-                        Menjadikan UIMS sebagai wadah mahasiswa Universitas Indonesia yang mampu mengembangkan
-                        pengetahuan secara ilmu maupun praktik dalam bidang motorsport agar mampu bersaing diranah
-                        nasional maupun internasional
-                    </p>
-                    <h4>Misi</h4>
-                    <p className="lead">
-                        UI Motorsport is also used as a catalyst for the team to
-                        develop their character and apply their knowledge and skills 
-                        in engineering to real life.
-                    </p>
-                </div>
-            </div>
         </div>
 
         <div id="socials" className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
@@ -63,7 +46,7 @@ const Home = () => (
                 <p className="lead">
                 Our official social media accounts will be used to let you know about open recuitments, events, races, and more.
                 </p>
-                <div class="wrapper">
+                <div class="wrapper bg-transparent">
                     <a href="https://www.linkedin.com/company/uimotorsport/" class="icon linkedin">
                         <div class="tooltip">LinkedIn</div>
                         <span><i class="fab fa-linkedin"></i></span>
