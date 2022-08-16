@@ -176,3 +176,8 @@ hr {
   background-color: #de463b;
   color: #ffffff;
 }
+
+.desc {
+  font-weight: 300;
+  font-size: 1.6rem;
+}
