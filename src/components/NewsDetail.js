@@ -29,7 +29,7 @@ const NewsDetail = () => {
 
     return (
         <div className='container my-4 px-5'>
-            <h1 className='display-2'>{newsPost.title}</h1>
+            <h1 className='display-4 text-break'>{newsPost.title}</h1>
             <h4>{newsPost.month} {newsPost.day}</h4>
             <div className='mt-5 mb-5' dangerouslySetInnerHTML={createNews()}/>
             <hr/>

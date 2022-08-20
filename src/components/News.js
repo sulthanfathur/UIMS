@@ -92,13 +92,13 @@ const News = () => {
             <div className="row mx-0 my-5 bg-darkgrey">
                 <div className="col m-4 mb-2 flex-column position-static">
                     <p className='slogan mb-0 mt-2'>featured news</p>
-                    <h3 className="display-4">{featuredNews.title}</h3>
+                    <h3 className="display-4 text-break">{featuredNews.title}</h3>
                     <p className="lead my-3">{featuredNews.excerpt}</p>
                     <hr/>
                     <Link to={`/news/${featuredNews.slug}`} className="btn btn-primary btn-lg">Read</Link>
                 </div>
                 <div className=''>
-                    <img width='500' height='331' src={featuredNews.thumbnail} alt='thumbnail' />
+                    <img className="card-img-top"width='500' height='331' src={featuredNews.thumbnail} alt='thumbnail' />
                 </div>
             </div>
 

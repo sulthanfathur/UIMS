@@ -197,5 +197,5 @@ img {
   word-wrap: break-word;
   display: block;
   line-height: 1em; /* a */
-  max-height: 10em; /* a x number of line to show (ex : 2 line)  */
+  max-height: 150em; /* a x number of line to show (ex : 2 line)  */
 }
