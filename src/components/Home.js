@@ -1,11 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-const Home = () => (
+const Home = () => {
+    const [featuredNews, setFeaturedNews] = useState([]);
+
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/news/featured`);
+                setFeaturedNews(res.data[0]);
+            }
+            catch (err) {
+
+            }
+        }
+
+        fetchData();
+    }, []);
+
+    return (
     <div className="dark-text">
         <div id="bannerimage">
             <div className="col-md-5 p-lg-5 headline">
-                <h1 className="slogan">
+                <h1 className="slogan text-break">
                     <h6>OUR MISSION:</h6>
                     CREATE GROUNDBRAKING INNOVATION AND START INSPIRE PEOPLE.
                 </h1>
@@ -13,31 +32,46 @@ const Home = () => (
             </div>
         </div>
 
-        <div className="jumbotron bg-transparent mt-5 container text-center">
-            <h1 className="display-4">Recent News</h1>
-            <p className="lead">All the latest news regarding UI Motorsport.</p>
-            <hr className="my-4" />
-            <Link className="btn btn-primary btn-lg" to="/news" role="button">Click Here!</Link>
-        </div>
+        {/* <div className="row bg-darkgrey d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+            <div className="col mt-2 m-5 flex-column position-static">
+                <p className='slogan mb-0 mt-2'>featured news</p>
+                <h3 className="display-4">{featuredNews.title}</h3>
+                <p className="lead my-3">{featuredNews.excerpt}</p>
+                <hr/>
+                <Link to={`/news/${featuredNews.slug}`} className="btn btn-primary btn-lg">Read</Link>
+            </div>
+            <img className="" width='420' height='360' src={featuredNews.thumbnail} alt='thumbnail' />
+        </div> */}
 
-        <div id="about" className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-            <div className="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-                <div className="my-2 py-3">
-                    <h2 className="display-3">ABOUT US</h2>
-                    <p className="lead my-3">
-                        We are motorsport team that was founded by Universitas Indonesia students
-                        who are interest, talented, and innovative in automotive sector, especially in
-                        karts, electric motorcycle, and motorsports.
-                    </p>
-                    <p className="lead">
-                        Our mission is what drives us to inspire students who interest and have potential in
-                        automotive by creating groundbreaking innovation, by create an inclusive environment
-                        and making positive impact in the world of motorsport.
-                    </p>
-                    <a className="btn btn-primary btn-lg" href="/about#" onclick="return redirectMe(this);">Read More</a>
+        <div className="bg-darkgrey row flex-md-equal w-100 ml-0 md-3">
+            <div className="m-3 p-3 mr-5">
+                <div className="ml-4 flex-column position-static">
+                    <h3 className='slogan mb-3 4 mt-4'>featured news</h3>
+                    <h5 className="text-muted mb-0">{featuredNews.month} {featuredNews.day}</h5>
+                    <h4 className="text-break mt-0">{featuredNews.title}</h4>
+                    <hr/>
+                    <Link to={`/news/${featuredNews.slug}`} className="btn btn-primary btn-lg">Read</Link>
                 </div>
             </div>
-            <div id="about-us" className="my-3 py-3 mr-md-3 pt-3 px-3 pt-md-5 px-md-5 overflow-hidden img-fluid mx-auto"></div>
+            <img className="p-3 overflow-hidden mx-auto" height="280" src={featuredNews.thumbnail} alt='thumbnail' />
+        </div>
+
+        <div id="about" className="container d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+            <div className="m-3 p-3 mr-5 text-center overflow-hidden">
+                <h2 className="display-3">ABOUT US</h2>
+                <p className="lead my-3">
+                    We are motorsport team that was founded by Universitas Indonesia students
+                    who are interest, talented, and innovative in automotive sector, especially in
+                    karts, electric motorcycle, and motorsports.
+                </p>
+                <p className="lead">
+                    Our mission is what drives us to inspire students who interest and have potential in
+                    automotive by creating groundbreaking innovation, by create an inclusive environment
+                    and making positive impact in the world of motorsport.
+                </p>
+                <a className="btn btn-primary btn-lg" href="/about#" onclick="return redirectMe(this);">Read More</a>
+            </div>
+            <div id="about-us" className="m-3 p-3 overflow-hidden mx-auto"></div>
         </div>
 
         <div id="socials" className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
@@ -66,7 +100,10 @@ const Home = () => (
                 </div>
             </div>
         </div>
-    </div>
-);
+    </div>        
+    )
+
+
+};
 
 export default Home;

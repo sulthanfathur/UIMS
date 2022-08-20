@@ -4,11 +4,16 @@
 }
 
 p {
+  font-weight: 300 !important;
   color:white !important;
 }
 
 hr {
   background-color: #8d8d8d;
+}
+
+img {
+  object-fit: cover;
 }
 
 .news-content {
@@ -67,7 +72,7 @@ hr {
 
 #bannerimage {
   width: 100%;
-  background-image: url(https://res.cloudinary.com/dbev4mnac/image/upload/v1660310863/Rectangle_1_dx28nf.png);
+  background-image: url(https://res.cloudinary.com/dbev4mnac/image/upload/v1660650013/Head_1_website_ul6v6n.png);
   height: 590px;
   background-position: center;
   margin-top: 0;
@@ -75,16 +80,9 @@ hr {
 
 #about-us {
   background-image: url(https://res.cloudinary.com/dbev4mnac/image/upload/v1660314087/Rectangle_14_xtn3hr.png);
-  width: 500px;
-  height: 560px;
+  height: 480px;
   background-position: center;
-}
-
-#visi-misi {
-  background-image: url(https://res.cloudinary.com/dbev4mnac/image/upload/v1660314079/Rectangle_13_ndo2e7.png);
-  width: 500px;
-  height: 500px;
-  background-position: center;
+  object-fit: cover;
 }
 
 .headline {
@@ -152,14 +150,14 @@ hr {
 .wrapper .linkedin:hover,
 .wrapper .linkedin:hover .tooltip,
 .wrapper .linkedin:hover .tooltip::before {
-  background-color: #3b5999;
+  background-color: #0e76a8;
   color: #ffffff;
 }
 
 .wrapper .instagram:hover,
 .wrapper .instagram:hover .tooltip,
 .wrapper .instagram:hover .tooltip::before {
-  background-color: #e1306c;
+  background-color: #dd2a7b;
   color: #ffffff;
 }
 
@@ -180,4 +178,24 @@ hr {
 .desc {
   font-weight: 300;
   font-size: 1.6rem;
+}
+
+#excerpt {
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bg-darkgrey{
+  background-color: #333333!important;
+}
+
+.text-break {
+  width: 104%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  display: block;
+  line-height: 1em; /* a */
+  max-height: 10em; /* a x number of line to show (ex : 2 line)  */
 }

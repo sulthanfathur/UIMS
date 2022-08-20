@@ -41,28 +41,44 @@ const News = () => {
 
         newsObject.map(newsPost => {
             return list.push(
-                <div className="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                    <div className="col p-4 d-flex flex-column position-static">
-                        <h3 className="mb-0">{newsPost.title}</h3>
-                        <div className="mb-1 text-muted">{newsPost.month} {newsPost.day}</div>
-                        <p className="card-text mb-auto">{newsPost.excerpt}</p>
-                        <Link to={`/news/${newsPost.slug}`} className="stretched-link">Continue reading</Link>
-                    </div>
-                    <div className="col-auto d-none d-lg-block">
-                        <img width='200' height='250' src={newsPost.thumbnail} alt='thumbnail' />
+                <div className="card mb-5 shadow-sm bg-darkgrey">
+                    <img classNameName="card-img-top" width="100%" height="225" src={newsPost.thumbnail} alt='thumbnail' />
+                    <div className="card-body">
+                        <h4>{newsPost.title}</h4>
+                        <p id="excerpt" classNameName="card-text excerpt mb-auto">{newsPost.excerpt}</p>
+                        <div className="d-flex justify-content-between align-items-center">
+                            <div className="btn-group">
+                                <Link className="btn btn-primary" to={`/news/${newsPost.slug}`} role="button">Read</Link>
+                            </div>
+                            <small className="text-muted mt-3">{newsPost.month} {newsPost.day}</small>
+                        </div>
                     </div>
                 </div>
+                // <div className="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                //     <div className="col p-4 d-flex flex-column position-static">
+                //         <h3 className="mb-0">{newsPost.title}</h3>
+                //         <div className="mb-1 text-muted">{newsPost.month} {newsPost.day}</div>
+                //         <p className="card-text mb-auto">{newsPost.excerpt}</p>
+                //         <Link to={`/news/${newsPost.slug}`} className="stretched-link">Continue reading</Link>
+                //     </div>
+                //     <div className="col-auto d-none d-lg-block">
+                //         <img width='200' height='250' src={newsPost.thumbnail} alt='thumbnail' />
+                //     </div>
+                // </div>
             );
         });
 
-        for (let i = 0; i < list.length; i += 2) {
+        for (let i = 0; i < list.length; i += 3) {
             result.push(
-                <div key={i} className='row mb-2'>
-                    <div className='col-md-6'>
+                <div key={i} className='row'>
+                    <div className='col-md-4'>
                         {list[i]}
                     </div>
-                    <div className='col-md-6'>
+                    <div className='col-md-4'>
                         {list[i+1] ? list[i+1] : null}
+                    </div>
+                    <div className='col-md-4'>
+                        {list[i+2] ? list[i+2] : null}
                     </div>
                 </div>
             )
@@ -72,16 +88,17 @@ const News = () => {
     }
 
     return (
-        <div className='container mt-3'>
-            <div className="jumbotron p-4 p-md-5 text-white rounded bg-dark">
-                <div className="col-md-6 px-0">
-                    <h1 className="display-4 font-italic">{featuredNews.title}</h1>
+        <div className='container mt-5'>
+            <div className="row mx-0 my-5 bg-darkgrey">
+                <div className="col m-4 mb-2 flex-column position-static">
+                    <p className='slogan mb-0 mt-2'>featured news</p>
+                    <h3 className="display-4">{featuredNews.title}</h3>
                     <p className="lead my-3">{featuredNews.excerpt}</p>
-                    <p className="lead mb-0">
-                        <Link to={`/news/${featuredNews.slug}`} href="#" class="text-white font-weight-bold">
-                            Continue reading...
-                        </Link>
-                    </p>
+                    <hr/>
+                    <Link to={`/news/${featuredNews.slug}`} className="btn btn-primary btn-lg">Read</Link>
+                </div>
+                <div className=''>
+                    <img width='500' height='331' src={featuredNews.thumbnail} alt='thumbnail' />
                 </div>
             </div>
 

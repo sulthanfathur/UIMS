@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const About = () => (
-    <div className='container mt-3'>
+    <div className='container my-5 px-5'>
         <h1 className='display-3 title'>About Us</h1>
         <div className='mt-5 mb-5 desc'>
             We are motorsport team that
