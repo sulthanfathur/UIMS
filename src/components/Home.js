@@ -45,7 +45,7 @@ const Home = () => {
 
         <div className="bg-darkgrey row flex-md-equal w-100 ml-0 md-3">
             <div className="m-3 p-3 mr-5">
-                <div className="text-center ml-4 flex-column position-static">
+                <div className="ml-5 flex-column position-static">
                     <h3 className='slogan mb-3 4 mt-4'>featured news</h3>
                     <h5 className="text-muted mb-0">{featuredNews.month} {featuredNews.day}</h5>
                     <h4 className="text-break mt-0">{featuredNews.title}</h4>
