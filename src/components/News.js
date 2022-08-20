@@ -54,17 +54,6 @@ const News = () => {
                         </div>
                     </div>
                 </div>
-                // <div className="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                //     <div className="col p-4 d-flex flex-column position-static">
-                //         <h3 className="mb-0">{newsPost.title}</h3>
-                //         <div className="mb-1 text-muted">{newsPost.month} {newsPost.day}</div>
-                //         <p className="card-text mb-auto">{newsPost.excerpt}</p>
-                //         <Link to={`/news/${newsPost.slug}`} className="stretched-link">Continue reading</Link>
-                //     </div>
-                //     <div className="col-auto d-none d-lg-block">
-                //         <img width='200' height='250' src={newsPost.thumbnail} alt='thumbnail' />
-                //     </div>
-                // </div>
             );
         });
 
