@@ -56,7 +56,7 @@ const Home = () => {
             <img className="p-3 overflow-hidden mx-auto" height="280" src={featuredNews.thumbnail} alt='thumbnail' />
         </div>
 
-        <div id="about" className="container d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+        <div id="about" className="container d-md-flex flex-md-equal w-100 my-md-5 pl-md-3">
             <div className="m-3 p-3 mr-5 text-center overflow-hidden">
                 <h2 className="display-3">ABOUT US</h2>
                 <p className="lead my-3">
@@ -73,6 +73,8 @@ const Home = () => {
             </div>
             <div id="about-us" className="m-3 p-3 overflow-hidden mx-auto"></div>
         </div>
+
+        <hr width="80%"/>
 
         <div id="socials" className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
             <div className="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
