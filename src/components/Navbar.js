@@ -19,7 +19,7 @@ const Navbar = () => (
             <a className="py-2 d-none d-md-inline-block" href="/#" onclick="return redirectMe(this);">Home</a>
             <Link to="/about" className="py-2 d-none d-md-inline-block">About Us</Link>
             <Link to="/news" className="py-2 d-none d-md-inline-block">News</Link>
-            <a className="py-2 d-none d-md-inline-block" href="/#" onclick="return redirectMe(this);">Meet The Team</a>
+            {/* <a className="py-2 d-none d-md-inline-block" href="/#" onclick="return redirectMe(this);">Meet The Team</a> */}
             <a className="py-2 d-none d-md-inline-block" href="/#socials" onclick="return redirectMe(this);">Social Media</a>
         </div>
     </nav>
