@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const About = () => (
     <div className='container my-5 px-5'>
