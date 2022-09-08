@@ -85,19 +85,19 @@ const Home = () => {
                 <div class="wrapper bg-transparent">
                     <a href="https://www.linkedin.com/company/uimotorsport/" class="icon linkedin">
                         <div class="tooltip">LinkedIn</div>
-                        <span><i class="fab fa-linkedin"></i></span>
+                        <p><i class="fab fa-linkedin"></i></p>
                     </a>
                     <a href="https://www.instagram.com/uimotorsport/" class="icon instagram">
                         <div class="tooltip">Instagram</div>
-                        <span><i class="fab fa-instagram"></i></span>
+                        <p><i class="fab fa-instagram"></i></p>
                     </a>
                     <a href="https://www.tiktok.com/@uimotorsport" class="icon tiktok">
                         <div class="tooltip">Tiktok</div>
-                        <span><i class="fab fa-tiktok"></i></span>
+                        <p><i class="fab fa-tiktok"></i></p>
                     </a>
                     <a href="/#" class="icon youtube">
                         <div class="tooltip">Youtube</div>
-                        <span><i class="fab fa-youtube"></i></span>
+                        <p><i class="fab fa-youtube"></i></p>
                     </a>
                 </div>
             </div>
