@@ -69,7 +69,7 @@ const Home = () => {
                     automotive by creating groundbreaking innovation, by create an inclusive environment
                     and making positive impact in the world of motorsport.
                 </p>
-                <a className="btn btn-primary btn-lg" href="/about#" onclick="return redirectMe(this);">Read More</a>
+                <a className="btn btn-primary btn-lg" href="/about" onclick="return redirectMe(this);">Read More</a>
             </div>
             <div id="about-us" className="m-3 p-3 overflow-hidden mx-auto"></div>
         </div>
