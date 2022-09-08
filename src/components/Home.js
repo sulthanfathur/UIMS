@@ -51,6 +51,7 @@ const Home = () => {
                     <h4 className="text-break mt-0">{featuredNews.title}</h4>
                     <hr/>
                     <Link to={`/news/${featuredNews.slug}`} className="btn btn-primary btn-lg">Read</Link>
+                    <Link to={`/news`} className="btn btn-outline-light btn-lg ml-3">All News</Link>
                 </div>
             </div>
             <img className="p-3 overflow-hidden mx-auto" height="280" src={featuredNews.thumbnail} alt='thumbnail' />
