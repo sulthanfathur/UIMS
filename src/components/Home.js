@@ -22,11 +22,12 @@ const Home = () => {
 
     return (
     <div className="dark-text">
-        <div id="bannerimage">
+        <div id="banner">
+            <span id="banner-image"></span>
             <div className="col-md-5 p-lg-5 headline">
                 <h1 className="slogan text-break">
                     <h6>OUR MISSION:</h6>
-                    CREATE GROUNDBRAKING INNOVATION AND START INSPIRE PEOPLE.
+                    CREATE GROUNDBREAKING INNOVATION AND START INSPIRE PEOPLE.
                 </h1>
                 <p className="slogan">"DON'T HESITATE, JUST START."</p>
             </div>
