@@ -43,9 +43,16 @@ img {
   text-decoration: none;
 }
 
+.our-mission {
+  font-size: 1.5vw;
+}
+
 .slogan {
-  font-family: 'Akira Expanded';
-  color: #fff;
+  font-size: 3vw;
+}
+
+.dont-hesitate {
+  font-size: 1.5vw;
 }
 
 /*
@@ -60,6 +67,28 @@ img {
   .flex-md-equal > * {
     -ms-flex: 1;
     flex: 1;
+  }
+}
+
+.akira{
+  font-family: 'Akira Expanded';
+}
+
+@media screen and (max-width: 768px) {
+  .our-mission {
+    font-size: 3vw;
+  }
+  .slogan {
+    font-size: 6vw;
+  }
+  .dont-hesitate {
+    font-size: 3vw;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .slogan {
+    padding-top: 5vw;
   }
 }
 
@@ -198,13 +227,4 @@ img {
 
 .bg-darkgrey{
   background-color: #333333!important;
-}
-
-.text-break {
-  width: 125%;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-  display: block;
-  line-height: 1em; /* a */
-  max-height: 150em; /* a x number of line to show (ex : 2 line)  */
 }

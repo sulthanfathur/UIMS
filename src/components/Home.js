@@ -25,11 +25,11 @@ const Home = () => {
         <div id="banner">
             <span id="banner-image"></span>
             <div className="col-md-5 p-lg-5 headline">
-                <h1 className="slogan text-break">
-                    <h6>OUR MISSION:</h6>
+                <h1 className="slogan akira">
+                    <h6 className="our-mission">OUR MISSION:</h6>
                     CREATE GROUNDBREAKING INNOVATION AND START INSPIRE PEOPLE.
                 </h1>
-                <p className="slogan">"DON'T HESITATE, JUST START."</p>
+                <p className="dont-hesitate akira">"DON'T HESITATE, JUST START."</p>
             </div>
         </div>
 
@@ -47,7 +47,7 @@ const Home = () => {
         <div className="bg-darkgrey row flex-md-equal w-100 ml-0 md-3">
             <div className="m-3 p-3 mr-5">
                 <div className="ml-5 flex-column position-static">
-                    <h3 className='slogan mb-3 4 mt-4'>featured news</h3>
+                    <h3 className='akira mb-3 4 mt-4'>featured news</h3>
                     <h5 className="text-muted mb-0">{featuredNews.month} {featuredNews.day}</h5>
                     <h4 className="text-break mt-0">{featuredNews.title}</h4>
                     <hr/>
@@ -59,7 +59,7 @@ const Home = () => {
         </div>
 
         <div id="about" className="container d-md-flex flex-md-equal w-100 my-md-5 pl-md-3">
-            <div className="m-3 p-3 mr-5 text-center overflow-hidden">
+            <div className="m-3 p-3  text-center overflow-hidden">
                 <h2 className="display-3">ABOUT US</h2>
                 <p className="lead my-3">
                     We are motorsport team that was founded by Universitas Indonesia students
