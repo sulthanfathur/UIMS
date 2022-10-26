@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 const Home = () => {
     const [featuredNews, setFeaturedNews] = useState([]);
 
-
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -32,17 +31,6 @@ const Home = () => {
                 <p className="dont-hesitate akira">"DON'T HESITATE, JUST START."</p>
             </div>
         </div>
-
-        {/* <div className="row bg-darkgrey d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-            <div className="col mt-2 m-5 flex-column position-static">
-                <p className='slogan mb-0 mt-2'>featured news</p>
-                <h3 className="display-4">{featuredNews.title}</h3>
-                <p className="lead my-3">{featuredNews.excerpt}</p>
-                <hr/>
-                <Link to={`/news/${featuredNews.slug}`} className="btn btn-primary btn-lg">Read</Link>
-            </div>
-            <img className="" width='420' height='360' src={featuredNews.thumbnail} alt='thumbnail' />
-        </div> */}
 
         <div className="bg-darkgrey row flex-md-equal w-100 ml-0 md-3">
             <div className="m-3 p-3 mr-5">
@@ -106,8 +94,6 @@ const Home = () => {
         </div>
     </div>        
     )
-
-
 };
 
 export default Home;
