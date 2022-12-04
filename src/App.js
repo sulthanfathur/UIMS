@@ -5,6 +5,7 @@ import Home from './components/Home';
 import News from './components/News';
 import NewsDetail from './components/NewsDetail';
 import About from './components/About';
+import Team from './components/Team';
 
 const App = () => (
     <Router>
@@ -14,6 +15,7 @@ const App = () => (
                 <Route exact path='/about' element={<About />} />
                 <Route exact path='/news' element={<News />} /> 
                 <Route exact path='/news/:id' element={<NewsDetail />} /> 
+                <Route exact path='/team' element={<Team />} /> 
             </Routes>
         </Layout>
     </Router>

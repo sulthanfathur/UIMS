@@ -20,7 +20,7 @@ const Home = () => {
     }, []);
 
     return (
-    <div className="dark-text">
+    <div className="dark-text"> 
         <div id="banner">
             <span id="banner-image"></span>
             <div className="col-md-5 p-lg-5 headline">
