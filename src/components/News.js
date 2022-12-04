@@ -80,7 +80,7 @@ const News = () => {
         <div className='container mt-5'>
             <div className="row mx-0 my-5 bg-darkgrey">
                 <div className="col m-4 mb-2 flex-column position-static">
-                    <p className='akira mb-0 mt-2'>featured news</p>
+                    <p className='slogan mb-0 mt-2 akira'>featured news</p>
                     <h3 className="display-4 text-break">{featuredNews.title}</h3>
                     <p className="lead my-3">{featuredNews.excerpt}</p>
                     <hr/>
