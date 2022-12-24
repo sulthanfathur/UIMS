@@ -16,8 +16,8 @@ const Navbar = () => (
                     loading="lazy"
                 />
             </a>
-            <a className="py-2 d-none d-md-inline-block" href="/#" onclick="return redirectMe(this);">Home</a>
-            <Link to="/about/#" className="py-2 d-none d-md-inline-block">About Us</Link>
+            <Link to="/" className="py-2 d-none d-md-inline-block">Home</Link>
+            <Link to="/about" className="py-2 d-none d-md-inline-block">About Us</Link>
             <Link to="/team" className="py-2 d-none d-md-inline-block">Our Team</Link>
             <Link to="/news" className="py-2 d-none d-md-inline-block">News</Link>
             <a className="py-2 d-none d-md-inline-block" href="#socials" onclick="return redirectMe(this);">Social Media</a>
@@ -30,7 +30,9 @@ const Navbar = () => (
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="align-items-end navbar-nav mr-auto mt-2 mt-lg-0">
                 <li className="nav-item">
-                    <a className="nav-link lead" href="/#" onclick="return redirectMe(this);">Home</a>
+                    <span data-toggle="collapse" data-target="#navbarTogglerDemo02">
+                        <Link to="/" className="nav-link lead">Home</Link>                            
+                    </span>
                 </li>
                 <li className="nav-item">
                     <span data-toggle="collapse" data-target="#navbarTogglerDemo02">
