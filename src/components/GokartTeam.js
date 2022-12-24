@@ -230,7 +230,7 @@ const GokartTeam = () => {
                 </div>
             </div>
 
-            <div className="BoxGrid_wrapper">
+            <div className="BoxGrid_wrapper mx-4">
                 <div className="BoxGrid_content">
                     {getMechanics()}
                 </div>
