@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 
 const GokartTeam = () => {
     const [teamCTO, setCTO] = useState([]);
@@ -157,7 +156,7 @@ const GokartTeam = () => {
 
             <div className="row mx-0">
                 <div className="BoxGrid_item col-md-6 px-0">
-                        <a className="text-light BoxGrid_image" href="">
+                        {/* <a className="text-light BoxGrid_image" href=""> */}
                             <div className="video-container">
                                 <video className="video" autoPlay muted loop>
                                     <source src="https://ferrari-cdn.thron.com/static/YYTTP6_F1-Banner_Sito_Charles_960x650_v2_CQOAHI.mp4?xseo=" type="video/mp4"/>
@@ -176,11 +175,11 @@ const GokartTeam = () => {
                                     </div>
                                 </div>
                             </div>
-                        </a>                
+                        {/* </a>                 */}
                 </div>
 
                 <div className="BoxGrid_item col-md-6 px-0">
-                        <a className="text-light BoxGrid_image" href="">
+                        {/* <a className="text-light BoxGrid_image" href=""> */}
                             <div className="video-container">
                                 <video className="video" autoPlay muted loop>
                                     <source src="https://ferrari-cdn.thron.com/static/YYTTP6_F1-Banner_Sito_Charles_960x650_v2_CQOAHI.mp4?xseo=" type="video/mp4"/>
@@ -199,7 +198,7 @@ const GokartTeam = () => {
                                     </div>
                                 </div>
                             </div>
-                        </a>                
+                        {/* </a>                 */}
                 </div>
             </div>
 
