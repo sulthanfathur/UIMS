@@ -99,7 +99,7 @@ const GokartTeam = () => {
 
         teamMechanics.map(mechanic => {
             return list.push(
-                <div className="BoxGrid_item col-md-3">
+                <div className="BoxGrid_item col-md-3 mb-4">
                         <a className="text-light BoxGrid_image" href={mechanic.linkedin}>
                             <div className='overlay-div'>
                                 <img className="card-img overlay-img" width="100%" height="133%" src={mechanic.foto} alt='thumbnail' />
@@ -230,7 +230,7 @@ const GokartTeam = () => {
                 </div>
             </div>
 
-            <div className="BoxGrid_wrapper mb-4">
+            <div className="BoxGrid_wrapper">
                 <div className="BoxGrid_content">
                     {getMechanics()}
                 </div>
