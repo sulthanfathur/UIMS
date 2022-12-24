@@ -184,7 +184,7 @@ const GokartTeam = () => {
                 </div>
             </div>
 
-            <div className="BoxGrid_wrapper mx-4">
+            <div className="BoxGrid_wrapper px-4">
                 <div className="BoxGrid_content">
                     <div className="">
                     {getStaffs()}
