@@ -44,8 +44,6 @@ const About = () => (
                 both national and international stages.
             <br/><br/>
         </div>
-        <hr/>
-        <br/><br/>
     </div>
 );
 
