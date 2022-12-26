@@ -154,53 +154,37 @@ const GokartTeam = () => {
                 </div> */}
             </div>
 
-            <div className="row mx-0">
+            {/* <div className="row mx-0">
                 <div className="BoxGrid_item col-md-6 px-0">
-                        {/* <a className="text-light BoxGrid_image" href=""> */}
-                            <div className="video-container">
-                                <video className="video" autoPlay muted loop>
-                                    <source src="https://ferrari-cdn.thron.com/static/YYTTP6_F1-Banner_Sito_Charles_960x650_v2_CQOAHI.mp4?xseo=" type="video/mp4"/>
-                                </video>
+                        <div className="video-container">
+                            <video className="video" autoPlay muted loop>
+                                <source src="https://res.cloudinary.com/dsgcv7moo/video/upload/v1672057479/media/UIMS/rayann_k2mcwh.mp4" type="video/mp4"/>
+                            </video>
+                        </div>
+                        
+                        <div className="card-img-overlay d-flex justify-content-center align-items-end">
+                            <div>
+                                <p className="lead akira mb-0 text-center">DRIVER</p>  
+                                <h1 className="text-center uppercase">RAYYAN</h1>                            
                             </div>
-                            
-                            <div className="card-img-overlay d-flex justify-content-center align-items-end">
-                                <div>
-                                    <p className="lead akira mb-0 text-center">DRIVER</p>  
-                                    <h1 className="text-center uppercase">RAYYAN</h1>                            
-                                </div>
-
-                                <div className="d-flex justify-content-between align-items-center">
-                                    <div className="btn-group">
-                                        {/* <Link className="btn btn-primary" role="button">Read</Link> */}
-                                    </div>
-                                </div>
-                            </div>
-                        {/* </a>                 */}
+                        </div>
                 </div>
 
                 <div className="BoxGrid_item col-md-6 px-0">
-                        {/* <a className="text-light BoxGrid_image" href=""> */}
-                            <div className="video-container">
-                                <video className="video" autoPlay muted loop>
-                                    <source src="https://ferrari-cdn.thron.com/static/YYTTP6_F1-Banner_Sito_Charles_960x650_v2_CQOAHI.mp4?xseo=" type="video/mp4"/>
-                                </video>
+                        <div className="video-container">
+                            <video className="video" autoPlay muted loop>
+                                <source src="https://res.cloudinary.com/dsgcv7moo/video/upload/v1672057483/media/UIMS/veruz_q6ylo0.mp4" type="video/mp4"/>
+                            </video>
+                        </div>
+                        
+                        <div className="card-img-overlay d-flex justify-content-center align-items-end">
+                            <div>
+                                <p className="lead akira mb-0 text-center">DRIVER</p>  
+                                <h1 className="text-center uppercase">Verouz</h1>                          
                             </div>
-                            
-                            <div className="card-img-overlay d-flex justify-content-center align-items-end">
-                                <div>
-                                    <p className="lead akira mb-0 text-center">DRIVER</p>  
-                                    <h1 className="text-center uppercase">Verouz</h1>                          
-                                </div>
-
-                                <div className="d-flex justify-content-between align-items-center">
-                                    <div className="btn-group">
-                                        {/* <Link className="btn btn-primary" role="button">Read</Link> */}
-                                    </div>
-                                </div>
-                            </div>
-                        {/* </a>                 */}
+                        </div>
                 </div>
-            </div>
+            </div> */}
 
             <a href={teamCTO.linkedin} class="text-light splitbanner_wrapper">
                 <div class="splitbanner_item">

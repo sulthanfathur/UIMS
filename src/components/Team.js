@@ -138,7 +138,7 @@ const Team = () => {
                 </div>
             </a>
 
-            <a href={`team/ev`} class="text-light splitbanner_wrapper gokart_team_img team_image-properties">
+            <a href={`team/ev`} class="text-light splitbanner_wrapper ev_team_img team_image-properties">
                 <div class="gokart_ev_banner_item">
                     <div class="splitbanner_content-transparent">
                         <div class="splitbanner_content-inside">
@@ -152,7 +152,7 @@ const Team = () => {
                 </div>
             </a>
             
-            <a href={`team/marketing`} class="text-light splitbanner_wrapper gokart_team_img team_image-properties">
+            <a href={`team/marketing`} class="text-light splitbanner_wrapper marketing_team_img team_image-properties">
                 <div class="gokart_ev_banner_item">
                     <div class="splitbanner_content-transparent">
                         <div class="splitbanner_content-inside">

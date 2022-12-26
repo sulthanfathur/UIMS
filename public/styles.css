@@ -467,7 +467,15 @@ a {
 }
 
 .gokart_team_img {
-  background-image: url(https://res.cloudinary.com/dbev4mnac/image/upload/v1660650013/Head_1_website_ul6v6n.png);
+  background-image: url(https://res.cloudinary.com/dsgcv7moo/image/upload/v1671978739/media/UIMS/gkart_2_fblpjt.png);
+}
+
+.ev_team_img {
+  background-image: url(https://res.cloudinary.com/dsgcv7moo/image/upload/v1671978718/media/UIMS/ev1_bcgwtb.png);
+}
+
+.marketing_team_img {
+  background-image: url(https://res.cloudinary.com/dsgcv7moo/image/upload/v1672057267/media/UIMS/mrkting_1_ldsiry.png);
 }
 
 .video-container {
