@@ -20,7 +20,7 @@ const Home = () => {
     }, []);
 
     return (
-    <div className="dark-text">
+    <div className="dark-text"> 
         <div id="banner">
             <span id="banner-image"></span>
             <div className="col-md-5 p-lg-5 headline">
@@ -64,34 +64,19 @@ const Home = () => {
             <div id="about-us" className="m-3 p-3 overflow-hidden mx-auto"></div>
         </div>
 
-        <hr width="80%"/>
-
-        <div id="socials" className="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
-            <div className="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-                <h2 className="display-4">OFFICIAL ACCOUNTS</h2>
-                <p className="lead">
-                Our official social media accounts will be used to let you know about open recuitments, events, races, and more.
-                </p>
-                <div class="wrapper bg-transparent">
-                    <a href="https://www.linkedin.com/company/uimotorsport/" class="icon linkedin">
-                        <div class="tooltip">LinkedIn</div>
-                        <p><i class="fab fa-linkedin"></i></p>
-                    </a>
-                    <a href="https://www.instagram.com/uimotorsport/" class="icon instagram">
-                        <div class="tooltip">Instagram</div>
-                        <p><i class="fab fa-instagram"></i></p>
-                    </a>
-                    <a href="https://www.tiktok.com/@uimotorsport" class="icon tiktok">
-                        <div class="tooltip">Tiktok</div>
-                        <p><i class="fab fa-tiktok"></i></p>
-                    </a>
-                    <a href="/#" class="icon youtube">
-                        <div class="tooltip">Youtube</div>
-                        <p><i class="fab fa-youtube"></i></p>
-                    </a>
+        <a href={`team`} class="text-light splitbanner_wrapper team_image-properties home_team_img">
+            <div class="gokart_ev_banner_item">
+                <div class="splitbanner_content-transparent">
+                    <div class="splitbanner_content-inside">
+                        <h2 class="akira">MEET OUR TEAM</h2>
+                        <br></br>
+                        <a href={`team`} class="text-light btn btn-outline-light btn">DISCOVER MORE</a>
+                    </div>
+                </div>
+                <div class="splitbanner_content-media">
                 </div>
             </div>
-        </div>
+        </a>
     </div>        
     )
 };

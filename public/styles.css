@@ -17,8 +17,12 @@ img {
   object-fit: cover;
 }
 
-.news-content {
+.light-text {
   color: white !important;
+}
+
+a {
+  text-decoration: none !important;
 }
 
 .container {
@@ -219,6 +223,11 @@ img {
   color: #ffffff;
 }
 
+.team-headline {
+  font-weight: 300;
+  font-size: calc(2.5rem + 2.1vw);
+}
+
 .desc {
   font-weight: 300;
   font-size: 1.6rem;
@@ -232,4 +241,262 @@ img {
 
 .bg-darkgrey{
   background-color: #333333!important;
+}
+
+/* OUR TEAM styles */
+.splitbanner_item {
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+
+.splitbanner_full-link {
+  display: flex;
+  width: 100%;
+}
+
+.splitbanner_wrapper {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.splitbanner_content-text {
+  position: relative;
+  flex: 1 1 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 96px 24px 24px;
+  z-index: 3;
+  min-height: 500px;
+}
+
+@media screen and (min-width: 601px) {
+  .splitbanner_content-text {
+    background-color: #333;
+  }
+}
+
+.splitbanner_content-transparent {
+  background-color: transparent;
+  position: relative;
+  flex: 1 1 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 96px 24px 24px;
+  z-index: 3;
+  min-height: 500px;
+}
+
+
+.splitbanner_content-media {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.splitbanner_content-inside {
+  width: 100%;
+  max-width: 450px;
+}
+
+.splitbanner_pre-title {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-family: 'Akira Expanded';
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  font-size: 18px;
+  line-height: 1.5em;
+  margin: 0 0 16px;
+}
+
+.title {
+  text-transform: uppercase;
+}
+
+.ImgAnimation_wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.ImgAnimation_content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.ImgAnimation_inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.Img_image {
+  position: relative;
+  width: 100%;
+}
+
+.Img_image-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Img_image-absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ImgAnimation_inner:hover > img {
+  transform: scale(1.1);
+  transition: transform 3s ease;
+}
+
+@media (min-width: 37.5625em) {
+  .splitbanner_item {
+    width: 50%;
+    height: 518px;
+  }
+  .gokart_ev_banner_item {
+    width: 50%;
+    height: 340px;
+  }
+  .splitbanner_wrapper {
+    flex-wrap: nowrap;
+  }
+
+  .splitbanner_content-text {
+    flex: 0 0 50%;
+    padding: 48px;
+    justify-content: center;
+    align-items: center;
+    min-height: 0;
+  }
+
+  .splitbanner_content-transparent {
+    flex: 0 0 50%;
+    padding: 117px;
+    justify-content: center;
+    align-items: center;
+    min-height: 0;
+  }
+
+  .splitbanner_content-media {
+    position: relative;
+    flex: 0 0 50%;
+    height: auto;
+    width: auto;
+  }
+}
+
+.overlay-div, .overlay-img {width:100%;}
+.overlay-div {position:relative;}
+.overlay-div:after {
+  width:100%;
+  content:'';
+  display:block;
+  position:absolute;
+  top:0;
+  left:0;
+  background: linear-gradient(to top, rgb(0, 0, 0) 0%,rgba(255,255,255,0) 69%);
+  height:100%;
+}
+
+.BoxGrid_wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.BoxGrid_content {
+  position: relative;
+  width: 100%;
+}
+
+.BoxGrid_list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.BoxGrid_item {
+  position: relative;
+  display: block;
+  flex: 0 1 auto;
+  width: 100%;
+}
+
+.BoxGrid_image {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+@media (min-width: 37.5625em) {
+.BoxGrid_item:hover .overlay-div > img {
+  transform: scale(1.1);
+  transition: transform 3s ease; }}
+
+.team_image-properties {
+  background-position: center;
+  background-size: cover;
+}
+
+.home_team_img {
+  background-image: url(https://res.cloudinary.com/dsgcv7moo/image/upload/v1671808134/media/UIMS/teammantap_lgvhtq.png);
+}
+
+.gokart_team_img {
+  background-image: url(https://res.cloudinary.com/dsgcv7moo/image/upload/v1671978739/media/UIMS/gkart_2_fblpjt.png);
+}
+
+.ev_team_img {
+  background-image: url(https://res.cloudinary.com/dsgcv7moo/image/upload/v1671978718/media/UIMS/ev1_bcgwtb.png);
+}
+
+.marketing_team_img {
+  background-image: url(https://res.cloudinary.com/dsgcv7moo/image/upload/v1672057267/media/UIMS/mrkting_1_ldsiry.png);
+}
+
+.video-container {
+  /* width is set as 100% here. any width can be specified as per requirement */
+  width: 100%;
+  padding-top: 56.25%;
+  height: 0px;
+  position: relative;
+}
+
+.video {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.bg-night {
+  background-color: #131313;
 }
