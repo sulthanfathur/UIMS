@@ -4,12 +4,15 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
     const [featuredNews, setFeaturedNews] = useState([]);
+    const [homepageBanner, setHomepageBanner] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/homepage/news/featured`);
-                setFeaturedNews(res.data[0]);
+                const featured = await axios.get(`${process.env.REACT_APP_API_URL}/api/homepage/news/featured`);
+                const banner = await axios.get(`${process.env.REACT_APP_API_URL}/api/homepage/`);
+                setFeaturedNews(featured.data[0]);
+                setHomepageBanner(banner.data[0]);
             }
             catch (err) {
 
@@ -21,8 +24,7 @@ const Home = () => {
 
     return (
     <div className="dark-text"> 
-        <div id="banner">
-            <span id="banner-image"></span>
+        <div className="banner" style={{ backgroundImage: `url(${homepageBanner.image})`}}>
             <div className="col-md-5 p-lg-5 headline">
                 <h1 className="slogan akira">
                     <h6 className="our-mission">OUR MISSION:</h6>

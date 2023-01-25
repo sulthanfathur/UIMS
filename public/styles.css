@@ -109,13 +109,13 @@ a {
   margin-top: 5px;
 }
 
-#banner {
+.banner {
   max-width: 200%;
   height: 590px;
-  background-image: url(https://res.cloudinary.com/dbev4mnac/image/upload/v1660650013/Head_1_website_ul6v6n.png);
   background-position: center;
   background-size: cover;
   margin-top: 0;
+  position: relative;
 }
 
 #banner-image {
