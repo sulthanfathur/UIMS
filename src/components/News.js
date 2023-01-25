@@ -9,7 +9,7 @@ const News = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/news/featured`);
+                const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/homepage/news/featured`);
                 setFeaturedNews(res.data[0]);
             }
             catch (err) {
@@ -24,7 +24,7 @@ const News = () => {
     useEffect(() => {
         const fetchNews = async () => {
             try {
-                const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/news/`);
+                const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/homepage/news/`);
                 setNews(res.data);
             }
             catch (err) {

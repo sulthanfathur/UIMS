@@ -8,7 +8,7 @@ const Home = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/news/featured`);
+                const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/homepage/news/featured`);
                 setFeaturedNews(res.data[0]);
             }
             catch (err) {
