@@ -48,23 +48,13 @@ const Home = () => {
             <img className="p-3 overflow-hidden mx-auto" height="280" src={featuredNews.thumbnail} alt='thumbnail' />
         </div>
 
-        <div id="about" className="container d-md-flex flex-md-equal w-100 my-md-5 pl-md-3">
-            <div className="m-3 p-3  text-center overflow-hidden">
-                <h2 className="display-3">ABOUT US</h2>
-                <p className="lead my-3">
-                    We are motorsport team that was founded by Universitas Indonesia students
-                    who are interest, talented, and innovative in automotive sector, especially in
-                    karts, electric motorcycle, and motorsports.
-                </p>
-                <p className="lead">
-                    Our mission is what drives us to inspire students who interest and have potential in
-                    automotive by creating groundbreaking innovation, by create an inclusive environment
-                    and making positive impact in the world of motorsport.
-                </p>
-                <Link to="/about" className="btn btn-primary btn-lg">Read More</Link>
+        <Link to="/about" id="about" className="container d-md-flex flex-md-equal w-100 my-md-5 pl-md-3">
+            <div className="flex text-center align-self-center">
+                <h2 className="display-3 light-text">ABOUT US</h2>
+                <Link to="/about" className="text-light btn btn-outline-light btn my-4">Read More</Link>
             </div>
             <div id="about-us" className="m-3 p-3 overflow-hidden mx-auto"></div>
-        </div>
+        </Link>
 
         <a href={`team`} class="text-light splitbanner_wrapper team_image-properties home_team_img">
             <div class="gokart_ev_banner_item">
@@ -72,7 +62,7 @@ const Home = () => {
                     <div class="splitbanner_content-inside">
                         <h2 class="akira">MEET OUR TEAM</h2>
                         <br></br>
-                        <a href={`team`} class="text-light btn btn-outline-light btn">DISCOVER MORE</a>
+                        <a href={`team`} className="text-light btn btn-outline-light btn">DISCOVER MORE</a>
                     </div>
                 </div>
                 <div class="splitbanner_content-media">
