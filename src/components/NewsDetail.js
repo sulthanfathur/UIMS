@@ -10,7 +10,7 @@ const NewsDetail = () => {
 
         const fetchData = async () => {
             try {
-                const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/news/${slug}`);
+                const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/homepage/news/${slug}`);
                 setNews(res.data);
             }
             catch (err) {
