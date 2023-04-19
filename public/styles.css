@@ -5,7 +5,7 @@
 
 span {
   font-weight: 300 !important;
-  color:white !important;
+  color: white !important;
 }
 
 hr {
@@ -27,7 +27,7 @@ a {
 }
 
 .container {
-    max-width: 960px;
+  max-width: 960px;
 }
 
 /*
@@ -35,13 +35,13 @@ a {
   */
 
 .site-header {
-  background-color: rgba(0, 0, 0, .85);
+  background-color: rgba(0, 0, 0, 0.85);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
   backdrop-filter: saturate(180%) blur(20px);
 }
 .site-header a {
-  color: #999 ;
-  transition: ease-in-out color .15s;
+  color: #999;
+  transition: ease-in-out color 0.15s;
 }
 .site-header a:hover {
   color: #fff;
@@ -76,12 +76,12 @@ a {
 }
 
 @font-face {
-  font-family: 'Akira Expanded';
-  src:url("/Akira Expanded Demo.woff") format('woff');
+  font-family: "Akira Expanded";
+  src: url("/Akira Expanded Demo.woff") format("woff");
 }
 
-.akira{
-  font-family: 'Akira Expanded';
+.akira {
+  font-family: "Akira Expanded";
 }
 
 @media screen and (max-width: 768px) {
@@ -102,11 +102,13 @@ a {
   }
 }
 
-.overflow-hidden { overflow: hidden; }
+.overflow-hidden {
+  overflow: hidden;
+}
 
-.navbar-logo img{
-  height : 30%;
-  width : 30%;
+.navbar-logo img {
+  height: 30%;
+  width: 30%;
   margin-top: 5px;
 }
 
@@ -135,12 +137,12 @@ a {
 /*
  * Footer
  */
- .blog-footer {
+.blog-footer {
   padding: 2.5rem 2.5rem;
   color: #999;
   text-align: center;
   background-color: #333333;
-  border-top: .05rem solid #333333;
+  border-top: 0.05rem solid #333333;
 }
 .blog-footer p:last-child {
   margin-bottom: 0;
@@ -164,13 +166,13 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
-.wrapper{
-    background: #fff;
-    padding: 50px;
-    text-align: center;
+.wrapper {
+  background: #fff;
+  padding: 50px;
+  text-align: center;
 }
 
-.wrapper .icon{
+.wrapper .icon {
   position: relative;
   background-color: #ffffff;
   border-radius: 50%;
@@ -227,13 +229,13 @@ a {
 }
 
 #excerpt {
-  white-space: nowrap; 
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.bg-darkgrey{
-  background-color: #333333!important;
+.bg-darkgrey {
+  background-color: #333333 !important;
 }
 
 /* OUR TEAM styles */
@@ -284,7 +286,6 @@ a {
   min-height: 500px;
 }
 
-
 .splitbanner_content-media {
   position: absolute;
   top: 0;
@@ -304,7 +305,7 @@ a {
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased;
   -o-font-smoothing: antialiased;
-  font-family: 'Akira Expanded';
+  font-family: "Akira Expanded";
   font-weight: normal;
   font-stretch: normal;
   letter-spacing: normal;
@@ -402,17 +403,26 @@ a {
   }
 }
 
-.overlay-div, .overlay-img {width:100%;}
-.overlay-div {position:relative;}
+.overlay-div,
+.overlay-img {
+  width: 100%;
+}
+.overlay-div {
+  position: relative;
+}
 .overlay-div:after {
-  width:100%;
-  content:'';
-  display:block;
-  position:absolute;
-  top:0;
-  left:0;
-  background: linear-gradient(to top, rgb(0, 0, 0) 0%,rgba(255,255,255,0) 69%);
-  height:100%;
+  width: 100%;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to top,
+    rgb(0, 0, 0) 0%,
+    rgba(255, 255, 255, 0) 69%
+  );
+  height: 100%;
 }
 
 .BoxGrid_wrapper {
@@ -446,9 +456,11 @@ a {
 }
 
 @media (min-width: 37.5625em) {
-.BoxGrid_item:hover .overlay-div > img {
-  transform: scale(1.1);
-  transition: transform 3s ease; }}
+  .BoxGrid_item:hover .overlay-div > img {
+    transform: scale(1.1);
+    transition: transform 3s ease;
+  }
+}
 
 .team_image-properties {
   background-position: center;

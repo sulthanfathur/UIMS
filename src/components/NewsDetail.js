@@ -1,41 +1,44 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
+import axios from "axios";
 
 const NewsDetail = () => {
-    const [newsPost, setNews] = useState({});
-    const { id } = useParams()
-    useEffect(() => {
-        const slug = id;
+  const [newsPost, setNews] = useState({});
+  const { id } = useParams();
+  useEffect(() => {
+    const slug = id;
 
-        const fetchData = async () => {
-            try {
-                const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/homepage/news/${slug}`);
-                setNews(res.data);
-            }
-            catch (err) {
-
-            }
-        };
-
-        fetchData();
-    }, [id]);
-
-    const createNews = () => {
-        return {__html: 
-            newsPost.content
-        }
+    const fetchData = async () => {
+      try {
+        const res = await axios.get(
+          `${process.env.REACT_APP_API_URL}/api/homepage/news/${slug}`
+        );
+        setNews(res.data);
+      } catch (err) {}
     };
 
-    return (
-        <div className='container my-4 px-5'>
-            <h1 className='display-4 text-break'>{newsPost.title}</h1>
-            <h4>{newsPost.month} {newsPost.day}</h4>
-            <div className='mt-5 mb-5' dangerouslySetInnerHTML={createNews()}/>
-            <hr/>
-            <p className='lead mb-5'><Link to='/news' className='font-weight-bold'>Back to News</Link></p>
-        </div>
-    );
+    fetchData();
+  }, [id]);
+
+  const createNews = () => {
+    return { __html: newsPost.content };
+  };
+
+  return (
+    <div className="container my-4 px-5">
+      <h1 className="display-4 text-break">{newsPost.title}</h1>
+      <h4>
+        {newsPost.month} {newsPost.day}
+      </h4>
+      <div className="mt-5 mb-5" dangerouslySetInnerHTML={createNews()} />
+      <hr />
+      <p className="lead mb-5">
+        <Link to="/news" className="font-weight-bold">
+          Back to News
+        </Link>
+      </p>
+    </div>
+  );
 };
 
 export default NewsDetail;
