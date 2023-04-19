@@ -1,49 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import axios from "axios";
 
-const GokartTeam = () => {
-  const [teamCTO, setCTO] = useState([]);
-  const [teamManagers, setManagers] = useState([]);
-  const [teamMechanics, setMechanics] = useState([]);
-
-  // FETCH JSON
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await axios.get(
-          `${process.env.REACT_APP_API_URL}/api/team/ev`
-        );
-        setCTO(res.data.cto[0]);
-      } catch (err) {}
-    };
-
-    fetchData();
-  }, []);
-
-  useEffect(() => {
-    const fetchManagers = async () => {
-      try {
-        const res = await axios.get(
-          `${process.env.REACT_APP_API_URL}/api/team/ev`
-        );
-        setManagers(res.data.managers);
-      } catch (err) {}
-    };
-    fetchManagers();
-  }, []);
-
-  useEffect(() => {
-    const fetchMechanics = async () => {
-      try {
-        const res = await axios.get(
-          `${process.env.REACT_APP_API_URL}/api/team/ev`
-        );
-        setMechanics(res.data.mechanics);
-      } catch (err) {}
-    };
-    fetchMechanics();
-  }, []);
-
+const EVTeam = ({ teamCTO, teamManagers, teamMechanics }) => {
   // GET MANAGERS
   const getManagers = () => {
     let list = [];
@@ -206,4 +164,27 @@ const GokartTeam = () => {
   );
 };
 
-export default GokartTeam;
+export async function getStaticProps() {
+  let teamCTO = [];
+  let teamManagers = [];
+  let teamMechanics = [];
+
+  try {
+    const res = await axios.get(
+      `${process.env.NEXT_PUBLIC_API_URL}/api/team/ev`
+    );
+    teamCTO = res.data.cto[0];
+    teamManagers = res.data.managers;
+    teamMechanics = res.data.mechanics;
+  } catch (err) {}
+
+  return {
+    props: {
+      teamCTO,
+      teamManagers,
+      teamMechanics,
+    },
+  };
+}
+
+export default EVTeam;

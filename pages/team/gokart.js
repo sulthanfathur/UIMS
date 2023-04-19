@@ -1,49 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import axios from "axios";
 
-const GokartTeam = () => {
-  const [teamCTO, setCTO] = useState([]);
-  const [teamManagers, setManagers] = useState([]);
-  const [teamStaffs, setStaffs] = useState([]);
-
-  // FETCH JSON
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await axios.get(
-          `${process.env.REACT_APP_API_URL}/api/team/marketing`
-        );
-        setCTO(res.data.cto[0]);
-      } catch (err) {}
-    };
-
-    fetchData();
-  }, []);
-
-  useEffect(() => {
-    const fetchManagers = async () => {
-      try {
-        const res = await axios.get(
-          `${process.env.REACT_APP_API_URL}/api/team/marketing`
-        );
-        setManagers(res.data.managers);
-      } catch (err) {}
-    };
-    fetchManagers();
-  }, []);
-
-  useEffect(() => {
-    const fetchStaffs = async () => {
-      try {
-        const res = await axios.get(
-          `${process.env.REACT_APP_API_URL}/api/team/marketing`
-        );
-        setStaffs(res.data.staffs);
-      } catch (err) {}
-    };
-    fetchStaffs();
-  }, []);
-
+const GokartTeam = ({ teamCTO, teamManagers, teamMechanics }) => {
   // GET MANAGERS
   const getManagers = () => {
     let list = [];
@@ -100,21 +58,21 @@ const GokartTeam = () => {
     return result;
   };
 
-  // GET STAFFS
-  const getStaffs = () => {
+  // GET MECHANICS
+  const getMechanics = () => {
     let list = [];
     let result = [];
 
-    teamStaffs.map((staff) => {
+    teamMechanics.map((mechanic) => {
       return list.push(
         <div className="BoxGrid_item col-md-3 mb-4">
-          <a className="text-light BoxGrid_image" href={staff.linkedin}>
+          <a className="text-light BoxGrid_image" href={mechanic.linkedin}>
             <div className="overlay-div">
               <img
                 className="card-img overlay-img"
                 width="100%"
                 height="133%"
-                src={staff.foto}
+                src={mechanic.foto}
                 alt="thumbnail"
               />
             </div>
@@ -122,9 +80,9 @@ const GokartTeam = () => {
             <div className="card-img-overlay d-flex align-items-end">
               <div>
                 <p className="lead akira mb-0">
-                  {staff.sub_division} {staff.jabatan}
+                  {mechanic.sub_division} {mechanic.jabatan}
                 </p>
-                <h2>{staff.name}</h2>
+                <h2>{mechanic.name}</h2>
               </div>
 
               <div className="d-flex justify-content-between align-items-center">
@@ -157,17 +115,7 @@ const GokartTeam = () => {
     <main>
       {/* HEADLINE */}
       <div className="container my-5 px-5">
-        <p className="team-headline text-center">MARKETING TEAM</p>
-        {/* <div className='mt-5 mb-5 desc'>
-                    We are motorsport team that
-                    was founded by Universitas
-                    Indonesia students who are
-                    interest, talented, and
-                    innovative in automotive
-                    sector, especially in karts,
-                    electric motorcycle, and
-                    motorsports.
-                </div> */}
+        <p className="team-headline text-center">GOKART TEAM</p>
       </div>
 
       <a href={teamCTO.linkedin} class="text-light splitbanner_wrapper">
@@ -209,11 +157,34 @@ const GokartTeam = () => {
 
       <div className="BoxGrid_wrapper px-4">
         <div className="BoxGrid_content">
-          <div className="">{getStaffs()}</div>
+          <div className="">{getMechanics()}</div>
         </div>
       </div>
     </main>
   );
 };
+
+export async function getStaticProps() {
+  let teamCTO = [];
+  let teamManagers = [];
+  let teamMechanics = [];
+
+  try {
+    const res = await axios.get(
+      `${process.env.NEXT_PUBLIC_API_URL}/api/team/gokart`
+    );
+    teamCTO = res.data.cto[0];
+    teamManagers = res.data.managers;
+    teamMechanics = res.data.mechanics;
+  } catch (err) {}
+
+  return {
+    props: {
+      teamCTO,
+      teamManagers,
+      teamMechanics,
+    },
+  };
+}
 
 export default GokartTeam;

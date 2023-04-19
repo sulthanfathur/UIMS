@@ -1,36 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import axios from "axios";
 
-const Team = () => {
-  const [teamPrincipal, setTeamPrincipal] = useState([]);
-  const [teamOthers, setTeam] = useState([]);
-
-  // FETCH JSON
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await axios.get(
-          `${process.env.REACT_APP_API_URL}/api/team/`
-        );
-        setTeamPrincipal(res.data.team_principal[0]);
-      } catch (err) {}
-    };
-
-    fetchData();
-  }, []);
-
-  useEffect(() => {
-    const fetchTeam = async () => {
-      try {
-        const res = await axios.get(
-          `${process.env.REACT_APP_API_URL}/api/team/`
-        );
-        setTeam(res.data.others);
-      } catch (err) {}
-    };
-    fetchTeam();
-  }, []);
-
+const Team = ({ teamPrincipal, teamOthers }) => {
   // GET MEMBERS
   const getTeam = () => {
     let list = [];
@@ -192,5 +163,23 @@ const Team = () => {
     </main>
   );
 };
+
+export async function getStaticProps() {
+  let teamPrincipal = [];
+  let teamOthers = [];
+
+  try {
+    const res = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/api/team/`);
+    teamPrincipal = res.data.team_principal[0];
+    teamOthers = res.data.others;
+  } catch (err) {}
+
+  return {
+    props: {
+      teamPrincipal,
+      teamOthers,
+    },
+  };
+}
 
 export default Team;

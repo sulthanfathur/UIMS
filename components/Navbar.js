@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const Navbar = () => (
   <nav className="navbar site-header sticky-top py-3 navbar-dark">
@@ -16,19 +16,19 @@ const Navbar = () => (
           loading="lazy"
         />
       </a>
-      <Link to="/" className="py-2 d-none d-md-inline-block">
+      <Link href="/" className="py-2 d-none d-md-inline-block">
         Home
       </Link>
-      <Link to="/about" className="py-2 d-none d-md-inline-block">
+      <Link href="/about" className="py-2 d-none d-md-inline-block">
         About Us
       </Link>
-      <Link to="/team" className="py-2 d-none d-md-inline-block">
+      <Link href="/team" className="py-2 d-none d-md-inline-block">
         Our Team
       </Link>
-      <Link to="/news" className="py-2 d-none d-md-inline-block">
+      <Link href="/news" className="py-2 d-none d-md-inline-block">
         News
       </Link>
-      <Link to="/sponsors" className="py-2 d-none d-md-inline-block">
+      <Link href="/sponsors" className="py-2 d-none d-md-inline-block">
         Sponsors
       </Link>
       <a
@@ -56,35 +56,35 @@ const Navbar = () => (
       <ul class="align-items-end navbar-nav mr-auto mt-2 mt-lg-0">
         <li className="nav-item">
           <span data-toggle="collapse" data-target="#navbarTogglerDemo02">
-            <Link to="/" className="nav-link lead">
+            <Link href="/" className="nav-link lead">
               Home
             </Link>
           </span>
         </li>
         <li className="nav-item">
           <span data-toggle="collapse" data-target="#navbarTogglerDemo02">
-            <Link to="/about" className="nav-link lead">
+            <Link href="/about" className="nav-link lead">
               About Us
             </Link>
           </span>
         </li>
         <li className="nav-item">
           <span data-toggle="collapse" data-target="#navbarTogglerDemo02">
-            <Link to="/team" className="nav-link lead">
+            <Link href="/team" className="nav-link lead">
               Our Team
             </Link>
           </span>
         </li>
         <li className="nav-item">
           <span data-toggle="collapse" data-target="#navbarTogglerDemo02">
-            <Link to="/news" className="nav-link lead">
+            <Link href="/news" className="nav-link lead">
               News
             </Link>
           </span>
         </li>
         <li className="nav-item">
           <span data-toggle="collapse" data-target="#navbarTogglerDemo02">
-            <Link to="/sponsors" className="nav-link lead">
+            <Link href="/sponsors" className="nav-link lead">
               Sponsors
             </Link>
           </span>

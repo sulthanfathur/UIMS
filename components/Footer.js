@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./Footer.css";
 
 const Footer = () => {
   const [sponsors, setSponsorData] = useState([]);
@@ -9,7 +8,7 @@ const Footer = () => {
     const fetchData = async () => {
       try {
         const res = await axios.get(
-          `${process.env.REACT_APP_API_URL}/api/sponsors/`
+          `${process.env.NEXT_PUBLIC_API_URL}/api/sponsors/`
         );
         setSponsorData(res.data);
       } catch (err) {}

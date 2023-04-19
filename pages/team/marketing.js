@@ -1,49 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const GokartTeam = () => {
-  const [teamCTO, setCTO] = useState([]);
-  const [teamManagers, setManagers] = useState([]);
-  const [teamMechanics, setMechanics] = useState([]);
-
-  // FETCH JSON
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await axios.get(
-          `${process.env.REACT_APP_API_URL}/api/team/gokart`
-        );
-        setCTO(res.data.cto[0]);
-      } catch (err) {}
-    };
-
-    fetchData();
-  }, []);
-
-  useEffect(() => {
-    const fetchManagers = async () => {
-      try {
-        const res = await axios.get(
-          `${process.env.REACT_APP_API_URL}/api/team/gokart`
-        );
-        setManagers(res.data.managers);
-      } catch (err) {}
-    };
-    fetchManagers();
-  }, []);
-
-  useEffect(() => {
-    const fetchMechanics = async () => {
-      try {
-        const res = await axios.get(
-          `${process.env.REACT_APP_API_URL}/api/team/gokart`
-        );
-        setMechanics(res.data.mechanics);
-      } catch (err) {}
-    };
-    fetchMechanics();
-  }, []);
-
+const MarketingTeam = ({ teamCTO, teamManagers, teamStaffs }) => {
   // GET MANAGERS
   const getManagers = () => {
     let list = [];
@@ -100,21 +58,21 @@ const GokartTeam = () => {
     return result;
   };
 
-  // GET MECHANICS
-  const getMechanics = () => {
+  // GET STAFFS
+  const getStaffs = () => {
     let list = [];
     let result = [];
 
-    teamMechanics.map((mechanic) => {
+    teamStaffs.map((staff) => {
       return list.push(
         <div className="BoxGrid_item col-md-3 mb-4">
-          <a className="text-light BoxGrid_image" href={mechanic.linkedin}>
+          <a className="text-light BoxGrid_image" href={staff.linkedin}>
             <div className="overlay-div">
               <img
                 className="card-img overlay-img"
                 width="100%"
                 height="133%"
-                src={mechanic.foto}
+                src={staff.foto}
                 alt="thumbnail"
               />
             </div>
@@ -122,9 +80,9 @@ const GokartTeam = () => {
             <div className="card-img-overlay d-flex align-items-end">
               <div>
                 <p className="lead akira mb-0">
-                  {mechanic.sub_division} {mechanic.jabatan}
+                  {staff.sub_division} {staff.jabatan}
                 </p>
-                <h2>{mechanic.name}</h2>
+                <h2>{staff.name}</h2>
               </div>
 
               <div className="d-flex justify-content-between align-items-center">
@@ -157,7 +115,7 @@ const GokartTeam = () => {
     <main>
       {/* HEADLINE */}
       <div className="container my-5 px-5">
-        <p className="team-headline text-center">GOKART TEAM</p>
+        <p className="team-headline text-center">MARKETING TEAM</p>
         {/* <div className='mt-5 mb-5 desc'>
                     We are motorsport team that
                     was founded by Universitas
@@ -169,38 +127,6 @@ const GokartTeam = () => {
                     motorsports.
                 </div> */}
       </div>
-
-      {/* <div className="row mx-0">
-                <div className="BoxGrid_item col-md-6 px-0">
-                        <div className="video-container">
-                            <video className="video" autoPlay muted loop>
-                                <source src="https://res.cloudinary.com/dsgcv7moo/video/upload/v1672057479/media/UIMS/rayann_k2mcwh.mp4" type="video/mp4"/>
-                            </video>
-                        </div>
-                        
-                        <div className="card-img-overlay d-flex justify-content-center align-items-end">
-                            <div>
-                                <p className="lead akira mb-0 text-center">DRIVER</p>  
-                                <h1 className="text-center uppercase">RAYYAN</h1>                            
-                            </div>
-                        </div>
-                </div>
-
-                <div className="BoxGrid_item col-md-6 px-0">
-                        <div className="video-container">
-                            <video className="video" autoPlay muted loop>
-                                <source src="https://res.cloudinary.com/dsgcv7moo/video/upload/v1672057483/media/UIMS/veruz_q6ylo0.mp4" type="video/mp4"/>
-                            </video>
-                        </div>
-                        
-                        <div className="card-img-overlay d-flex justify-content-center align-items-end">
-                            <div>
-                                <p className="lead akira mb-0 text-center">DRIVER</p>  
-                                <h1 className="text-center uppercase">Verouz</h1>                          
-                            </div>
-                        </div>
-                </div>
-            </div> */}
 
       <a href={teamCTO.linkedin} class="text-light splitbanner_wrapper">
         <div class="splitbanner_item">
@@ -234,14 +160,40 @@ const GokartTeam = () => {
       </a>
 
       <div className="BoxGrid_wrapper py-2 px-4">
-        <div className="BoxGrid_content">{getManagers()}</div>
+        <div className="BoxGrid_content">
+          <div className="">{getManagers()}</div>
+        </div>
       </div>
 
       <div className="BoxGrid_wrapper px-4">
-        <div className="BoxGrid_content">{getMechanics()}</div>
+        <div className="BoxGrid_content">
+          <div className="">{getStaffs()}</div>
+        </div>
       </div>
     </main>
   );
 };
 
-export default GokartTeam;
+export async function getStaticProps() {
+  let teamCTO = [];
+  let teamManagers = [];
+  let teamStaffs = [];
+
+  try {
+    const res = await axios.get(
+      `${process.env.NEXT_PUBLIC_API_URL}/api/team/marketing`
+    );
+    teamCTO = res.data.cto[0];
+    teamManagers = res.data.managers;
+    teamStaffs = res.data.staffs;
+  } catch (err) {}
+
+  return {
+    props: {
+      teamCTO,
+      teamManagers,
+      teamStaffs,
+    },
+  };
+}
+export default MarketingTeam;

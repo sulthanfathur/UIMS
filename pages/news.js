@@ -1,37 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
-const News = () => {
-  const [newsObject, setNews] = useState([]);
-  const [featuredNews, setFeaturedNews] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await axios.get(
-          `${process.env.REACT_APP_API_URL}/api/homepage/news/featured`
-        );
-        setFeaturedNews(res.data[0]);
-      } catch (err) {}
-    };
-
-    fetchData();
-  }, []);
-
-  useEffect(() => {
-    const fetchNews = async () => {
-      try {
-        const res = await axios.get(
-          `${process.env.REACT_APP_API_URL}/api/homepage/news/`
-        );
-        setNews(res.data);
-      } catch (err) {}
-    };
-
-    fetchNews();
-  }, []);
-
+const News = ({ newsObject, featuredNews }) => {
   const getNews = () => {
     let list = [];
     let result = [];
@@ -54,9 +25,8 @@ const News = () => {
             <div className="d-flex justify-content-between align-items-center">
               <div className="btn-group">
                 <Link
-                  className="btn btn-primary"
-                  to={`/news/${newsPost.slug}`}
-                  role="button"
+                  href={`/news/${featuredNews.slug}`}
+                  className="btn btn-primary btn-lg"
                 >
                   Read
                 </Link>
@@ -92,7 +62,7 @@ const News = () => {
           <p className="lead my-3">{featuredNews.excerpt}</p>
           <hr />
           <Link
-            to={`/news/${featuredNews.slug}`}
+            href={`/news/${featuredNews.slug}`}
             className="btn btn-primary btn-lg"
           >
             Read
@@ -113,5 +83,31 @@ const News = () => {
     </div>
   );
 };
+
+export async function getStaticProps() {
+  let newsObject = [];
+  let featuredNews = [];
+
+  try {
+    const res = await axios.get(
+      `${process.env.NEXT_PUBLIC_API_URL}/api/homepage/news/featured`
+    );
+    featuredNews = res.data[0];
+  } catch (err) {}
+
+  try {
+    const res = await axios.get(
+      `${process.env.REACT_APP_API_URL}/api/homepage/news/`
+    );
+    newsObject = res.data;
+  } catch (err) {}
+
+  return {
+    props: {
+      newsObject,
+      featuredNews,
+    },
+  };
+}
 
 export default News;
